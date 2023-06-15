@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff--body: 'Staatliches', cursive;
+    --ff--texting: 'Palanquin', sans-serif;
+
+    --bc--headingprimary: hsla(218, 17%, 62%, 1);
+    --bc--headingsecondary: hsla(275, 18%, 79%, 1);
+    --bc--span: hsla(312, 91%, 96%, 1);
+    --fc--heading: hsla(0, 0%, 100%, 1);
+    --fc--texting: hsla(274, 84%, 12%, 1);
+    --fc--span: hsla(232, 17%, 35%, 1);
+
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--ff--body);
+}
+
+.page {
+    max-width: clamp(38rem,30rem + 60vw, 117rem);
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background: var(--bc--headingprimary);
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.header {
+    background-color: var(--bc--headingsecondary);
+    color: var(--fc--heading);
+}
+
+.header h1 {
+    font-size: 40px;
+    letter-spacing: 0.05em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    width: 32rem;
+    margin: auto;
+}
+
+main p {
+    font-family: var(--ff--texting);
+    color: var(--fc--texting);
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    width: 30rem;
+}
+
+.card {
+    border-radius: 20px;
+    position: relative;
+}
+
+.card span {
+    background: var(--bc--span);
+    color: var(--fc--span);
+    border-radius: 20px;
+    position: absolute;
+    top: 1.7rem;
+    right: 2rem;
+    padding: 1rem 2.4rem;
+    font-size: 2rem;
+    align-items: center;
+}
+
+span {
+    animation: topdown 700ms 300ms;
+    
+}
+
+img {
+    animation-name: downtop;
+    animation-duration: 700ms;
+}
+
+@keyframes topdown {
+    0%{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
